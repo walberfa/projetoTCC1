@@ -1,0 +1,40 @@
+\chapter{Trabalhos Relacionados}
+\label{CAP2}
+
+
+O trabalho em [2], apresenta uma técnica para encontrar a proporção de MBUs (multiple bit upsets) em testes que medem os efeitos de single events. Os resultados dos experimentos comprovam que a quantidade de MBUs aumenta de acordo com a complexidade e a diminuição dos circuitos integrados.
+
+[13] apresenta códigos de correção e detecção de erros que utilizam Hamming e Hamming Estendido e mostra suas taxas de correção e detecção para diferentes aplicações. O trabalho cita que os códigos apresentados podem ser usados na detecção de MCUs em SRAMs. [12] testou SRAMs para mostrar que single events upsetes podem também afetar múltplos bits, após ionizar sistemas de memórias em diferentes aplicações.
+
+[3], [9] e [10] focam mais na necessidade de utilizar códigos de correção de erros em aplicações sujeitas à interferências causadas por fatores ambientais, como as aplicações aeroespaciais, onde o risco de falha pode ser catastrófico. [3] compara a aplicação do código Reed-Muller com códigos mais tradicionais e mostra que seu desempenho em relação à velocidade de processamento é melhor.
+
+A abordagem de [5], cujo método apresentado foi chamado Matrix devido ao seu formato matricial, combina Hamming e paridade. O código é avaliado utilizando testes de injeção de falhas para calcular o MTTF e comparado com outros métodos anteriores em relação às taxas de correção e detecção. O método possui uma taxa de correção menor que o Reed-Muller, mas devido a robustez deste, os custos de implementação do Matrix se mostram mais vantajosos.
+
+Em [11], os autores avaliam códigos de correção de erros em sistemas com alto grau de parelelismo, os NoCs (Network-on-Chip’s) contra MCUs. Os experimentos envolvem três códigos e dois parâmetros de buffer diferentes. Ele apresenta uma metodologia boa de comparação entre códigos em aplicações mais específicas.
+
+Após os trabalhos citados anteriormente, uma série de abordagens que utilizam ECCs matriciais foram sendo apresentadas. [6] apresenta o Column Line Code (CLC), um código matricial que se apropria dos conceitos de paridade e Hamming Estendido. Os autores avaliam o código em relação a área ocupada, potência consumida e latência. Há também comparação entre os códigos para diferentes quantidades de bits de erro, apontando que o CLC corrige e detecta mais erros que os códigos com os quais foi comparado.
+
+[7] apresenta o Matrix Region Section Code (MRSC), um código matricial que também se apropria dos conceitos de paridade, mas que usa intercalação. Os autores avaliam o código em relação a área ocupada, potência consumida e latência, concluindo num cálculo baseado nesses fatores e nas taxas de correção e detecção de erros, que o MRSC apresenta baixo custo de implementação se comparado às abordagens anteriores.
+
+Assim como os artigos que apresentam o CLC e o MRSC, o trabalho em [8] apresenta o PHICC, Parity Hamming Interleaving Correction Code, que como o nome sugere, usa conceitos de paridade, Hamming e intercalação.  Nesse trabalho, os autores também fazem comparações com outros códigos em relação a área, potência e latência, mas também se utiliza de cálculos mais complexos, como o MTTF e a confiabilidade.
+
+A Figura 1 é um gráfico onde podem ser visto as diferenças entre alguns dos códigos citados anteriormente, quanto às taxas de correção de erros. Foram testados cenários de 1 a 8 erros para um total de 1 milhão de palavras pseudo-aleatórias injetadas nas implementações.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.4]{figures/download.png}
+\caption{Taxa de correção de erros [8]}
+\label{fig:taxadecorrecao}
+\end{figure}
+
+Na Figura 2, os autores comparam os parâmetros de área (medida em micrometros) e potência (medida em miliwatts) consumidas, e atraso no tempo de execução (latência, dada em nanosegundos). O custo total é calculado usando as taxas de correção e detecção de erros inversamente proporcionais às informações de área, potencia e latência.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.4]{figures/download1.png}
+\caption{Parâmetros para medir custo total de implementação [8]}
+\label{fig:parametros}
+\end{figure}
+
+
+\bibliographystyle{plain}

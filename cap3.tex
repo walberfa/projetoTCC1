@@ -1,0 +1,30 @@
+\chapter{Metodologia}\label{CAP3}
+
+O desenvolvimento deste trabalho deve ocorrer em cinco etapas: escolha e uso da ferramenta de simulação de sistemas digitais, implementação dos códigos, escolha da ferramenta de injeção de falhar, experimentação e montagem dos quadros comparativos.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.8]{figures/diagrama.png}
+\caption{Etapas para o desenvolvimento do trabalho}
+\label{fig:diagrama}
+\end{figure}
+
+Etapa 1: Escolha e uso da ferramenta de simulação de sistemas digitais.
+
+Nesta primeira etapa, serão estudadas algumas ferramentas de simulação para sistemas digitais com o objetivo de escolher uma que possa contemplar a todos os parâmetros que se pretende utilizar.
+
+Etapa 2: Implementação dos códigos.
+
+Neste etapa, será feita dois de tipos de implementação dos códigos a serem comparados: a da matemática por trás dos códigos, que será feita em Python e/ou Matlab, e a implementação em VHDL, na ferramenta de simulação escolhida na etapa anterior. Neste segundo tipo de implementação já poderão ser calculados alguns parâmetros, como potência e area ocupada.
+
+Etapa 3: Escolha da ferramenta de injeção de falhas.
+
+Serão analisadas algumas ferramentas de injeção de falhas disponíveis do mercado, assim como as utilizadas pelos autores dos trabalhos estudados. Definida qual a ferramenta, podemos ir para a próxima etapa.
+
+Etapa 4: Experimentos.
+
+A etapa de experimentação é bastante importante, pois é onde podemos obter os dados das taxas de correção e detecção de falhas. A ferramenta escolhida, irá injetar milhares de falhas pseudo-aleatórias nos sistemas de memória, afim de que os códigos corretores de erro encontrem e corrijam estas falhas.
+
+Etapa 5: Montagem dos quadros comparativos.
+
+Esta é a última etapa do trabalho, quando já dispormos de todos os dados necessários para a comparação entre os códigos. Serão montados três quadros: desempenho, implementação e abordagem.

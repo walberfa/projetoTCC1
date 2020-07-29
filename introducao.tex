@@ -1,0 +1,42 @@
+\chapter{Introdução}\label{CAP:introducao}
+%\thispagestyle{empty}
+
+A constante evolução na microeletrônica tem proporcionado dispositivos cada vez mais eficazes e eficientes naquilo que se propõem [1]. No entanto, esse nível de integração dos circuitos acaba por causar o aumento da sensibilidade a interferências externas [2]. Segundo [3] essas interferências nas células de memória podem ocasionar Single Event Upset (SEU), quando um único bit é corrompido, ou Multiple Cell Upset (MCU), quando uma quantidade maior de bits é afetada, podendo danificar seriamente os circuitos integrados. Quando as células de memória permanecem em mau funcionamento, chama-se hard error, mas se a alteração no funcionamento é temporária, tem-se um soft error.
+
+Nesse contexto, códigos corretores de erros são estratégias utilizadas para minimizar esses problemas, detectando e corrigindo eventuais erros através de diversos algoritmos. Muitos pesquisadores vêm utilizando, mais amplamente em sistemas embarcados, códigos que se apropriam dos conceitos de paridade e de Hamming para criar novos algoritmos.
+
+
+Um dos primeiros códigos corretores de erros é o Reed-Muller, desenvolvido na década de 1950 e sendo utilizado em aplicações espaciais. Foi implementado nas sondas Mariner, que transmitia fotos da superfície de Marte [4]. Outro desses códigos capazes de lidar com MCUs em memórias é o código Matrix [5]. Esse código associa o código de Hamming com paridade, codificando uma palavra em formato matricial. O Reed-Muller é mais robusto que o Matrix e apresenta taxa de correção maior, no entanto, os custos de implementação do Matrix são muito menores.
+
+Usando conceitos de Hamming Estendido e paridade, o Column Line Code (CLC) [6] é um código matricial que apresenta custo de implementação bem mais baixos que o Reed-Muller e taxas de correção maiores que o Matrix. Proposto em [7], o Matrix Region Section Code (MRSC) traz conceitos de paridade e intercalação, com objetivo de melhorar as taxas de correção aliadas ao custo. O Parity Hamming Interleaved Correction Code (PHICC) é um dos códigos matriciais mais recentes, desenvolvido para ser um código de baixo custo computacional além de possuir uma grande capacidade de correção de erros, unindo paridade, Hamming e intercalação [8].
+
+\section{Objetivos}
+
+O objetivo desse trabalho é montar um quadro comparativo que sintetize o desempenho destes códigos corretores de erros, usando parâmetros como potência consumida, área ocupada e latência. Além disso, pretende-se comparar os códigos em relação à sua implementação (número de bits de redundância, número de portas lógicas na codificação) e quais técnicas são usadas (Hamming, paridade, intercalação, etc.).
+
+
+\subsection{Objetivos específicos}
+
+Compreender os efeitos que a exposição a ambientes hostis pode causar a dispositivos eletrônicos.
+
+Utilizar ferramentas de simulação e desenvolvimento de sistemas digitais.
+
+Implementar e avaliar os cógidos em VHDL e Python.
+
+Testar aplicações com mecanismos de injeção de falhas e técnicas de análises de sistemas digitais.
+
+Montagem dos quadros comparativos.
+
+\section{Justificativa}
+
+A radiação está presente em diversas formas e lugares, então dispositivos eletrônicos, mesmo em situações cotidianas, estão expostos a fatores que podem levá-los ao mau funcionamento. A crescente demanda por uma maior densidade e baixo consumo de potência, têm aumentado consideravelmente a sensibilidade à radiação [1].
+
+Em aplicações mais críticas [4], onde o sistema de memória está mais suscetível a interferências provenientes do ambiente, como em aplicações aeroespaciais, a ocorrência de MCUs é bastante comum.
+
+O trabalho em [3] diz que a probabilidade de duas células vizinhas serem afetadas por um erro é dez vezes menor que uma única célula. Assim como um erro que afeta três células, é cem vezes menor que um erro único. No entanto, após teste com sistemas de memória usando interferência externa espalhadas aleatoriamente pelas células, [9] mostra que as células afetadas são, na maioria das vezes, fisicamente próximas ou até mesmo adjacentes. Estes trabalhos mostram a importância de proteger as memórias contra erros múltiplos.
+
+Sabendo disso, e que os recursos de energia nessas aplicações são limitados, os códigos de correção e detecção de erros que vêm sendo propostos, se preocupam com parâmetros como área ocupada e potência consumida.
+
+No entanto, outro importante parâmetro a ser analisado é o custo computacional de implementação, pois códigos mais robustos, embora protejam melhor que os mais simples, acabam por ser mais difíceis de implementar.
+
+Com todas essas comparações organizadas, será possível analisar quais os pontos fortes de cada código e qual o mais indicado para diferentes tipos de sistemas embarcados.

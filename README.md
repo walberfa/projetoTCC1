@@ -5,5 +5,5 @@ Curso: Ciência da Computação
 Status:
 - [x] Concepção da ideia
 - [x] Revisão bibliográfica
-- [ ] Experimentos
-- [ ] Redação de artigo
+- [ ] Redação de artigo de revisão para o CONINP
+- [ ] Submissão de artigo de revisão

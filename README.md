@@ -7,3 +7,4 @@ Status:
 - [x] Revisão bibliográfica
 - [x] Redação de artigo de revisão para o CONINP
 - [x] Submissão de artigo de revisão
+- [ ] Apresentação no CONINP
